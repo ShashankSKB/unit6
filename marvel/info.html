@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 >Info page</h1>
+    <div id="info"></div>
+</body>
+</html>
+<script>
+
+
+async function GetChoice()
+{
+    var h1=document.createElement("h1");
+    
+    var choice=JSON.parse(localStorage.getItem("current_choice"));
+    console.log(choice);
+    h1.textContent=choice;
+
+    var body=document.getElementById("info");
+
+    let data= await fetch(`https://superheroapi.com/api/3166478473634194/search/${choice}`);
+    let res=await data.json();
+
+    let file=await res.results[0]
+
+    console.log("document",file)
+
+   
+        console.log(file.image)
+        console.log(file.appearance.gender)
+        
+
+        //powerstats
+        console.log(file.powerstats.intelligence);
+        console.log(file.powerstats.strength);
+        console.log(file.powerstats.speed);
+        console.log(file.powerstats.combat);
+        console.log(file.powerstats.durability);
+        console.log(file.connections)
+  
+    body.append(h1);
+}
+
+GetChoice();
+</script>

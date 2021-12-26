@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/style/styling2.css">
+    <title>Document</title>
+
+   
+</head>
+<body>
+    <audio
+        
+    src="/marveltheme.mp3" autoplay>
+        Your browser does not support the
+        <code>audio</code> element.
+</audio>
+    
+
+<div id="found">
+
+    <div id="image">
+
+    </div>
+    <div id="child1">
+        <h2>Personal info</h2>
+
+    </div >
+
+    <div id=child2>
+        <h2>powerstats</h2>
+
+    </div>
+
+    
+
+</div>
+
+<button id="back" ><a style="text-decoration: none" href="indx2.html">Go back</a></button>
+</body>
+</html>
+
+<script>
+
+    var choice=JSON.parse(localStorage.getItem("choice"));
+    console.log(choice);
+
+    var body=document.querySelector('body');
+
+    var main=document.getElementById("found");
+    var Personal=document.getElementById("child1");
+    var Anatomy=document.getElementById("child2")
+
+    async function getting_info(n)
+    {
+        let response= await fetch(`https://superheroapi.com/api/3166478473634194/search/${n}`);
+        let data=await response.json();
+      //  console.log(data);
+        let info=await data.results[0]
+        
+        console.log(info)
+
+        var div=document.createElement("div");
+        var div2=document.createElement("div");
+
+        // info.forEach(element => {
+
+            var person=document.createElement("h2");
+            var p_name=document.createElement("p");
+            var p_height=document.createElement("p");
+            var p_gender=document.createElement("p");
+            var p_birthyear=document.createElement("p");
+           
+
+            var p_haircolor=document.createElement("p");
+            var p_eyecolor=document.createElement("p");
+            var p_mass=document.createElement("p");
+            var p_durablity=document.createElement("p");
+
+            p_name.textContent="Name: "+info.name;
+            p_height.textContent="Height: "+info.appearance.height;
+            p_gender.textContent="Gender: "+info.appearance.gender;
+            p_mass.textContent="Intelligence: "+info.powerstats.intelligence;
+
+            p_birthyear.textContent="Strength: "+info.powerstats.strength;
+            p_haircolor.textContent="Speed: "+info.powerstats.speed;
+            p_eyecolor.textContent="Combat: "+info.powerstats.combat;
+
+            person.textContent=info.name;
+            p_durablity.textContent="Durability: "+info.powerstats.durability
+
+            body.prepend(person)
+            div.append(p_name,p_height,p_gender);
+            Personal.appendChild(div);
+            main.appendChild(Personal);
+
+            div2.append(p_haircolor,p_eyecolor,p_mass,p_durablity);
+            Anatomy.appendChild(div2);
+            main.appendChild(Anatomy);
+            console.log("image",info.image.url)
+            
+            // document.body.style.backgroundImage = 'url('+info.image.url+')';
+
+            var div3=document.getElementById("image");
+
+            var focus=document.createElement("img");
+            focus.src=info.image.url;
+
+            focus.style.width="300px"
+
+            div3.append(focus)
+            
+
+        // });
+    }
+
+    getting_info(choice);
+
+    function border(){
+        var fou=document.getElementById("found");
+        fou.setAttribute("class","alternative")
+        
+    }
+    fou.addEventListener("onmouseover","border")
+
+</script>

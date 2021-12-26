@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/style/styling1.css">
+    <title>Document</title>
+    
+    
+
+</head>
+<body>
+    
+    <div id="grand">
+        <audio
+        
+        src="/marveltheme.mp3" autoplay>
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+
+        <!-- <img src="/backgroundimage.jpg"></img> -->
+        <div class="logo">
+            <img src="/marvellogo.png"></img>
+                    </div>
+                       
+            
+                <div id="parent">
+                    <div id="child1">
+                        <input type="text" oninput="debouncing(getData,1000)" placeholder="Search Characters" id="query" >
+                        <div id="info"></div>
+                    </div>
+                    <div id="child2">
+                        <button id="search"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDExOC43ODMgMTE4Ljc4MyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8cGF0aCBkPSJNMTE1Ljk3LDEwMS41OTdMODguNjYxLDc0LjI4NmM0LjY0LTcuMzg3LDcuMzMzLTE2LjExOCw3LjMzMy0yNS40ODhjMC0yNi41MDktMjEuNDktNDcuOTk2LTQ3Ljk5OC00Ny45OTYgICBTMCwyMi4yODksMCw0OC43OThjMCwyNi41MSwyMS40ODcsNDcuOTk1LDQ3Ljk5Niw0Ny45OTVjMTAuMTk3LDAsMTkuNjQyLTMuMTg4LDI3LjQxNC04LjYwNWwyNi45ODQsMjYuOTg2ICAgYzEuODc1LDEuODczLDQuMzMzLDIuODA2LDYuNzg4LDIuODA2YzIuNDU4LDAsNC45MTMtMC45MzMsNi43OTEtMi44MDZDMTE5LjcyLDExMS40MjMsMTE5LjcyLDEwNS4zNDcsMTE1Ljk3LDEwMS41OTd6ICAgIE00Ny45OTYsODEuMjQzYy0xNy45MTcsMC0zMi40NDMtMTQuNTI1LTMyLjQ0My0zMi40NDNzMTQuNTI2LTMyLjQ0NCwzMi40NDMtMzIuNDQ0YzE3LjkxOCwwLDMyLjQ0MywxNC41MjYsMzIuNDQzLDMyLjQ0NCAgIFM2NS45MTQsODEuMjQzLDQ3Ljk5Niw4MS4yNDN6IiBmaWxsPSIjMDAwMDAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg=="></button>
+                    </div>
+                </div>
+    </div>
+       
+   
+
+    
+
+ 
+
+
+</body>
+</html>
+
+<script>
+    
+   
+
+    async function getData()
+    {
+
+        let curr=document.getElementById("query").value;
+        let div=document.getElementById("info");
+
+        div.textContent=null;
+
+        if(curr.length <3)
+        {
+            return false;
+        }
+
+        let response= await fetch(`https://superheroapi.com/api/3166478473634194/search/${curr}`);
+        let data=await response.json();
+        console.log(data);
+        let info=await data.results
+        console.log(info)
+
+        info.forEach(function (element) {
+
+            let p_name=document.createElement("p");
+            p_name.innerText=element.name;
+
+            let p_height=document.createElement("p");
+            p_height.textContent=element.height;
+
+            console.log(p_name,p_height);
+
+            p_name.setAttribute("onclick","temp()");
+            
+            
+
+            div.append(p_name)
+
+
+            
+            
+        });
+        
+    }
+
+
+    function debouncing(func,delay)
+    {
+        
+        var curr=document.getElementById("query").value;
+
+        
+        
+        
+        setTimeout(() => {
+            func()
+        }, delay);
+    }
+
+
+    function temp()
+    {
+       
+     //  alert(event.srcElement.textContent);
+       console.log(event.srcElement.textContent);  //way of getting a value without using id or any other attribute by onclick function
+
+       var current_choice=event.srcElement.textContent;
+
+       current_choice=JSON.stringify(current_choice)
+       localStorage.setItem("choice",current_choice);
+
+        window.location.href = "info2.html";
+
+
+       
+    }
+   // getData()
+</script>

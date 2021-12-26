@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.container{
+    border:5px red solid;
+    margin: 5%;
+    border-top-left-radius: 20px;
+    border-top-right-radius:20px;
+    overflow-y: hidden;
+    padding:10%
+
+    /* height: 500px; */
+}
+</style>
+<body>
+    <div class="container">
+    </div>
+</body>
+<script>
+    let data=document.querySelector(".container")
+    let count=1
+    add()
+    function add(){
+        console.log("add");   
+        for (let i = 0; i < 25; i++) {
+            let h1=document.createElement("h1")
+            h1.textContent=`Masai Student ${count}`
+            count++
+            data.appendChild(h1)
+        }
+    }
+  
+    
+    window.addEventListener("scroll", async () => {
+    // Do not run if currently fetching
+    // Scrolled to bottom
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        add();
+    }
+    });
+
+    </script>
+</html>

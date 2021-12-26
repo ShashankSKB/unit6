@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="parent">
+        <input placeholder="Search for character" id="query" oninput="Debouncing(getData)" ></input>
+        <button onclick="getData()">Search</button>
+
+        <div id="info">
+
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+
+ async function getData(){
+
+
+    let div=document.createElement("div");
+    let info=document.getElementById("info");
+
+    info.textContent=null;
+    let query=document.getElementById("query").value;
+
+
+    try{
+        let data= await fetch(`https://superheroapi.com/api/3166478473634194/search/${query}`);
+    let res=await data.json();
+
+    let file=await res.results
+    
+    file.forEach(function (element){
+
+      
+        let p=document.createElement("p");
+        p.textContent= (element.name);
+        const name=element;
+        p.setAttribute("onclick", `choice('${name}')`);
+            
+        info.append(p);
+    })
+
+    }
+    catch(err){
+        let p=document.createElement("p");
+        p.textContent="character with given name not found";
+        info.append(p);
+    }
+
+
+}
+let request;
+
+function Debouncing(func)
+{
+   
+    let query=document.getElementById("query").value;
+    console.log("here",query)
+    if(query.length<3)
+    {   
+       return false;
+    }
+    
+    if(request)
+    {
+        clearTimeout(request)
+    }
+
+     request=setTimeout(()=>{
+        func();
+    },1000)
+}
+
+function choice(element)
+{
+    console.log("ele",element);
+  
+
+     localStorage.setItem("current_choice",JSON.stringify(element));
+
+     window.location.href = "info.html";
+}
+
+
+
+//public key : 4014f20789853b228b978858a4091ccb
+//private key: c65d4a770bf770a8ff9431972af9a76ed8ccd625
+</script>
