@@ -1,0 +1,36 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "artist": "Darshan -raval",
+      "album_name": "ek tarfa",
+      "songs":["ek tarfa","saari ki saari","peene do","judaiyann"]
+    },
+    {
+      "id": 2,
+      "artist": "Arijit Singh",
+      "album_name": "Aashiqui",
+      "songs":["Sanam re","Bulleya","Tum hi ho"]
+    },
+    {
+      "id": 3,
+      "artist": "Jubin",
+      "album_name": "ek tarfa",
+      "songs":["ek tarfa","saari ki saari","peene do","judaiyann"]
+    },
+    {
+      "id": 4,
+      "artist": "Jubin",
+      "album_name": "ek tarfa",
+      "songs":["ek tarfa","saari ki saari","peene do","judaiyann"]
+    },
+    {
+      "id": 5,
+      "artist": "Jubin",
+      "album_name": "ek tarfa",
+      "songs":["ek tarfa","saari ki saari","peene do","judaiyann"]
+    }
+    
+  ]
+  
+}
